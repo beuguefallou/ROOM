@@ -1,0 +1,72 @@
+@import "src/Scss_Variable.scss";
+
+.onCallContainer {
+  background-color: black;
+  // background-color: #d43c3c;
+  // border: 1px solid white;
+  padding: 1rem;
+  // border-right: 1px solid white;
+  // border-left: 1px solid white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  .onCallWrapper {
+    .videoSection {
+      // border: 1px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #localVideo {
+        // border: 3px solid rgba(124, 224, 142, 0.327);
+        margin: 1rem;
+        // border-color: gray;
+        border-radius: 10px;
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.33);
+      }
+      #remoteVideo {
+        // background-color: red;
+        // border: 3px solid rgba(218, 84, 84, 0.368);
+        // border-color: gray;
+        border-radius: 10px;
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.33);
+      }
+
+      .videoTags {
+        // overflow: hidden;
+
+        width: 30vw;
+        border: 1px solid $ZoomOffBlack;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .onCallContainer {
+    position: relative;
+    // border: 1px solid white;
+    .videoSection {
+      flex-direction: column;
+      // border: 1px solid white;
+      width: 100vw;
+      #localVideo {
+        position: absolute;
+        width: 40%;
+        top: 0.25rem;
+        right: 0.5rem;
+      }
+      #remoteVideo {
+        width: 90% !important;
+        // height: fit-content !important;
+      }
+      .videoTags {
+        // overflow: hidden;
+        border: 1px solid $ZoomOffBlack;
+      }
+    }
+  }
+}
